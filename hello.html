@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Detoxifier</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            width: 250px;
+        }
+        h1 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>YouTube Detoxifier</h1>
+    <label for="topic">Enter the topic you want to watch:</label>
+    <input type="text" id="topic" placeholder="e.g., Python, Finance, Chess" />
+    <button id="filterButton">Filter Videos</button>
+    <p id="status" style="color: green; margin-top: 10px; display: none;">Filtering...</p>
+    <script src="popup.js"></script>
+</body>
+</html>
