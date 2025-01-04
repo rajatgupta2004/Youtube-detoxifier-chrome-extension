@@ -15,7 +15,7 @@
             font-size: 18px;
             margin-bottom: 10px;
         }
-        input {
+        input[type="text"] {
             width: 100%;
             padding: 8px;
             margin-bottom: 10px;
@@ -33,13 +33,30 @@
         button:hover {
             background-color: #0056b3;
         }
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .checkbox-container input[type="checkbox"] {
+            margin-left: 10px;
+        }
     </style>
 </head>
 <body>
     <h1>YouTube Detoxifier</h1>
     <label for="topic">Enter the topic you want to watch:</label>
     <input type="text" id="topic" placeholder="e.g., Python, Finance, Chess" />
-    <button id="filterButton">Filter Videos</button>
+    <div class="checkbox-container">
+        <label for="checkbox">Block all videos in the right sidebar</label>
+        <input type="checkbox" id="checkbox" name="checkbox" value="checkbox" />
+    </div>
+    <div class="checkbox-container">
+        <label for="checkbox">Block shorts section in the home</label>
+        <input type="checkbox" id="shorts" name="checkbox" value="checkbox" />
+    </div>
+    
+    <button id="filterButton">Apply Changes</button>
     <p id="status" style="color: green; margin-top: 10px; display: none;">Filtering...</p>
     <script src="popup.js"></script>
 </body>
