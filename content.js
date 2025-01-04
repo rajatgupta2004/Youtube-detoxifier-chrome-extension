@@ -1,7 +1,6 @@
 let removingVideos = false;
 const observer = new MutationObserver(function (mutations) {
     let shouldRun = false;
-
     // Check if any mutation is relevant
     mutations.forEach(function (mutation) {
         if (mutation.addedNodes.length || mutation.removedNodes.length) {
@@ -12,7 +11,6 @@ const observer = new MutationObserver(function (mutations) {
         removeRecommendedVideos();
     }
 });
-
 async function isVideoGood(video, tags) {
     try {
         const data = await fetch(`http://localhost:3001/data?videoUrl=${video}`, {
@@ -92,8 +90,6 @@ window.addEventListener('load', function () {
     removeRecommendedVideos();
     observer.observe(document.body, { childList: true, subtree: true });
 });
-
-
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     const tags = message.message;
     console.log("Message received:", tags);
@@ -123,8 +119,6 @@ chrome.storage.local.get(["isClicked"]).then((result) => {
         subtree: true
     });
 });
-
-
 chrome.storage.local.get(["isShorts"]).then((result) => {
     console.log("Value is " + result.isShorts);
     const observer = new MutationObserver((mutations, obs) => {
@@ -141,7 +135,6 @@ chrome.storage.local.get(["isShorts"]).then((result) => {
         }else{
             console.log("YouTube Shorts section not found.");
         }
-
     });
     // Start observing the document for changes
     observer.observe(document, {

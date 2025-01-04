@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -58,6 +58,63 @@
     
     <button id="filterButton">Apply Changes</button>
     <p id="status" style="color: green; margin-top: 10px; display: none;">Filtering...</p>
+    <script src="popup.js"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Detoxifier</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                </svg>
+            </div>
+            <h1>YouTube Detoxifier</h1>
+        </div>
+
+        <div class="input-group">
+            <label for="topic">What would you like to focus on?</label>
+            <input type="text" id="topic" placeholder="e.g., Python Finance Chess" />
+        </div>
+
+        <div class="toggle-group">
+            <div class="toggle-item">
+                <span class="toggle-label">Block sidebar recommendations</span>
+                <label class="switch">
+                    <input type="checkbox" id="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <div class="toggle-item">
+                <span class="toggle-label">Block Shorts section</span>
+                <label class="switch">
+                    <input type="checkbox" id="shorts">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+
+        <button id="filterButton">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+            </svg>
+            Apply Filters
+        </button>
+
+        <p id="status">Changes applied successfully!</p>
+    </div>
+
     <script src="popup.js"></script>
 </body>
 </html>
